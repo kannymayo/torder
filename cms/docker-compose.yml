@@ -14,10 +14,10 @@ services:
     depends_on:
       - mongo
     environment:
-      MONGODB_URI: mongodb://mongo:27017/payload
+      MONGODB_URI: ${MONGODB_URI_DOCKER}
       PORT: 3000
       NODE_ENV: development
-      PAYLOAD_SECRET: TESTING
+      PAYLOAD_SECRET: ${PAYLOAD_SECRET}
 
   mongo:
     image: mongo:latest
